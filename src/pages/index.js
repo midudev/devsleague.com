@@ -7,6 +7,7 @@ import { IconBrain } from '@tabler/icons-react'
 import { IconBug } from '@tabler/icons-react'
 import { IconBrandTwitch } from '@tabler/icons-react'
 import { IconRocket } from '@tabler/icons-react'
+import Marquee from 'react-fast-marquee'
 
 const montserrat = Montserrat({ weight: ['500', '700'], subsets: ['latin'] })
 
@@ -36,20 +37,6 @@ export default function Home() {
               con pruebas, clasificación y premios
             </span>
           </h1>
-          <h4 className="flex flex-col items-center justify-center gap-3 mt-8 text-sm shadow-xl md:flex-row shadow-black">
-            <span className="flex items-center text-red-500 gap-x-1">
-              <IconSwords /> CSS Battle
-            </span>
-            <span className="flex items-center text-sky-400 gap-x-1">
-              <IconEyeOff /> Programa a ciegas
-            </span>
-            <span className="flex items-center text-pink-400 gap-x-1">
-              <IconBrain /> Lógica de programación
-            </span>
-            <span className="flex items-center text-orange-400 gap-x-1">
-              <IconBug /> Encuentra el bug
-            </span>
-          </h4>
         </div>
 
         <div className="flex items-center pt-12 gap-x-4">
@@ -93,6 +80,61 @@ export default function Home() {
           </a>
         </footer>
       </main>
+
+      <footer className="fixed flex items-center justify-center w-screen uppercase bottom-2">
+        <Marquee gradientWidth={'300px'} gradientColor={[0, 0, 0]} speed={50}>
+          <h4 className="flex flex-col items-center justify-center mt-8 opacity-50 gap-x-4 md:flex-row shadow-black">
+            <span className="flex items-center text-red-300 gap-x-1">
+              <IconSwords /> CSS Battle
+            </span>
+            <span className="flex items-center text-sky-300 gap-x-1">
+              <IconEyeOff /> Programa a ciegas
+            </span>
+            <span className="flex items-center text-pink-300 gap-x-1">
+              <IconBrain /> Lógica de programación
+            </span>
+            <span className="flex items-center text-orange-300 gap-x-1">
+              <IconBug /> Encuentra el bug
+            </span>
+            <span className="flex items-center text-red-300 gap-x-1">
+              <IconSwords /> CSS Battle
+            </span>
+            <span className="flex items-center text-sky-300 gap-x-1">
+              <IconEyeOff /> Programa a ciegas
+            </span>
+            <span className="flex items-center text-pink-300 gap-x-1">
+              <IconBrain /> Lógica de programación
+            </span>
+            <span className="flex items-center text-orange-300 gap-x-1">
+              <IconBug /> Encuentra el bug
+            </span>
+            <span className="flex items-center text-red-300 gap-x-1">
+              <IconSwords /> CSS Battle
+            </span>
+            <span className="flex items-center text-sky-300 gap-x-1">
+              <IconEyeOff /> Programa a ciegas
+            </span>
+            <span className="flex items-center text-pink-300 gap-x-1">
+              <IconBrain /> Lógica de programación
+            </span>
+            <span className="flex items-center text-orange-300 gap-x-1">
+              <IconBug /> Encuentra el bug
+            </span>
+            <span className="flex items-center text-red-300 gap-x-1">
+              <IconSwords /> CSS Battle
+            </span>
+            <span className="flex items-center text-sky-300 gap-x-1">
+              <IconEyeOff /> Programa a ciegas
+            </span>
+            <span className="flex items-center text-pink-300 gap-x-1">
+              <IconBrain /> Lógica de programación
+            </span>
+            <span className="flex items-center pr-3 text-orange-300 gap-x-1">
+              <IconBug /> Encuentra el bug
+            </span>
+          </h4>
+        </Marquee>
+      </footer>
     </div>
   )
 }
