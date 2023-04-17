@@ -18,7 +18,7 @@ export default function Home() {
       style={{
         minHeight: '100vh',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '50%',
+        backgroundSize: '40%',
         backgroundPosition: 'center',
         backgroundImage: "url('./bkg.jpg')",
       }}
