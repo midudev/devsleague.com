@@ -5,7 +5,6 @@ import { Logo } from '@/components/Logo'
 import { IconEyeOff, IconSwords } from '@tabler/icons-react'
 import { IconBrain } from '@tabler/icons-react'
 import { IconBug } from '@tabler/icons-react'
-import { IconBrandTwitch } from '@tabler/icons-react'
 import { IconRocket } from '@tabler/icons-react'
 import Marquee from 'react-fast-marquee'
 
@@ -13,18 +12,13 @@ const montserrat = Montserrat({ weight: ['500', '700'], subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div
-      className={montserrat.className}
-      style={{
-        minHeight: '100vh',
-      }}
-    >
-      <main className="flex flex-col items-center justify-center col-span-1 text-white md:min-h-screen">
+    <div className={`${montserrat.className} min-h-screen`}>
+      <main className="flex flex-col items-center justify-center min-h-screen col-span-1 text-white">
         <div
           className="relative"
           style={{
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
+            backgroundSize: '50%',
             backgroundPosition: 'bottom',
             backgroundImage: "url('./bkg.jpg')",
           }}
@@ -87,7 +81,7 @@ export default function Home() {
 
       <footer className="fixed flex items-center justify-center w-screen uppercase bottom-2">
         <Marquee gradientWidth={'300px'} gradientColor={[0, 0, 0]} speed={50}>
-          <h4 className="flex flex-col items-center justify-center mt-8 opacity-50 gap-x-4 md:flex-row shadow-black">
+          <h4 className="flex items-center justify-center mt-8 opacity-50 md:flex-row gap-x-4 shadow-black">
             <span className="flex items-center text-red-300 gap-x-1">
               <IconSwords /> CSS Battle
             </span>
