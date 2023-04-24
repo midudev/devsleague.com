@@ -17,14 +17,18 @@ export default function Home() {
       className={montserrat.className}
       style={{
         minHeight: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '40%',
-        backgroundPosition: 'center',
-        backgroundImage: "url('./bkg.jpg')",
       }}
     >
       <main className="flex flex-col items-center justify-center col-span-1 text-white md:min-h-screen">
-        <div className="relative">
+        <div
+          className="relative"
+          style={{
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'bottom',
+            backgroundImage: "url('./bkg.jpg')",
+          }}
+        >
           <Logo />
           <div className="absolute top-0 blur-2xl animate-pulse">
             <Logo />
