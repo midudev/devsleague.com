@@ -69,7 +69,7 @@ export default function Home() {
 
           <a
             className="flex items-center justify-center px-4 py-2 text-black transition bg-yellow-300 rounded-sm font-sm gap-x-1 hover:contrast-150 hover:scale-110"
-            href="https://twitch.tv/midudev"
+            href="mailto:miduga@gmail.com"
             target="_blank"
             rel="noopener"
           >
