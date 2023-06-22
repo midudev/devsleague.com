@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         <div className="flex items-center pt-12 gap-x-4">
-          <h3 className="text-3xl font-bold">Junio 2023</h3>
+          <h3 className="text-3xl font-bold">Julio 2023</h3>
           <svg className="w-20 h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2800">
             <path d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600z" style={{ fill: '#fff' }} />
             <path
