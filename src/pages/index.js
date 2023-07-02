@@ -13,7 +13,7 @@ const montserrat = Montserrat({ weight: ['500', '700'], subsets: ['latin'] })
 export default function Home() {
   return (
     <div className={`${montserrat.className} min-h-screen`}>
-      <main className="flex flex-col items-center justify-center min-h-screen col-span-1 text-white">
+      <main className="overflow-hidden flex flex-col items-center justify-center min-h-screen col-span-1 text-white">
         <div
           className="relative"
           style={{
