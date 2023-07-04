@@ -9,10 +9,30 @@ import { PruebasMarquee } from '@/components/Pruebas'
 const inter = Inter({ weight: ['400', '700'], subsets: ['latin'] })
 const interTight = Inter_Tight({ weight: ['800'], subsets: ['latin'] })
 
+import Head from 'next/head'
+
 export default function Home() {
   return (
     <>
       <MouseEffect />
+
+      <Head>
+        <title>devsleague.com - Competición de creadores de contenido de programación</title>
+        <meta name="description" content="Donde programadores y creadores de contenido compiten" />
+        <meta property="og:image" content="https://devsleague.com/img/og-image.jpg" />
+        <meta property="twitter:image" content="https://devsleague.com/img/og-image.jpg" />
+        <meta property="og:title" content="devsleague.com - Competición de creadores de contenido de programación" />
+        <meta
+          property="twitter:title"
+          content="devsleague.com - Competición de creadores de contenido de programación"
+        />
+        <meta property="og:description" content="Donde programadores y creadores de contenido compiten" />
+        <meta property="twitter:description" content="Donde programadores y creadores de contenido compiten" />
+        <meta property="og:url" content="https://devsleague.com" />
+        <meta property="twitter:url" content="https://devsleague.com" />
+        <meta property="og:type" content="website" />
+        <meta property="twitter:card" content="summary_large_image" />
+      </Head>
       <div className={`${inter.className} fixed flex items-center justify-center w-screen uppercase opacity-50 top-2`}>
         <PruebasMarquee />
       </div>
