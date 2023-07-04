@@ -51,7 +51,7 @@ export default function Home() {
               <div className="mt-12">
                 <h1 className={`${interTight.className} text-white text-3xl md:text-6xl text-center font-extrabold`}>
                   Donde programadores y <br />
-                  <span className="text-transparent bg-gradient-to-r from-red-200 to-red-300 bg-clip-text">
+                  <span className="text-transparent bg-gradient-to-r from-midu-secondary to-midu-primary bg-clip-text">
                     creadores de contenido
                   </span>
                   <br />
