@@ -1,16 +1,9 @@
-import Image from 'next/image'
 import { Inter, Inter_Tight } from 'next/font/google'
-import Link from 'next/link'
 import { Logo } from '@/components/Logo'
-import { IconEyeOff, IconSwords } from '@tabler/icons-react'
-import { IconBrain } from '@tabler/icons-react'
-import { IconBug } from '@tabler/icons-react'
 import { IconRocket } from '@tabler/icons-react'
-import Marquee from 'react-fast-marquee'
-import { IconDeviceIpadHorizontalQuestion } from '@tabler/icons-react'
+
 import { TwitchIcon } from '@/components/TwitchIcon'
 import MouseEffect from '@/components/Mouse'
-import { Card } from '@/components/Card'
 import { PruebasMarquee } from '@/components/Pruebas'
 
 const inter = Inter({ weight: ['400', '700'], subsets: ['latin'] })
@@ -36,7 +29,7 @@ export default function Home() {
               </div>
 
               <div className="mt-12">
-                <h1 className={`${interTight.className} text-white text-6xl text-center font-extrabold`}>
+                <h1 className={`${interTight.className} text-white text-3xl md:text-6xl text-center font-extrabold`}>
                   Donde programadores y <br />
                   <span className="text-transparent bg-gradient-to-r from-red-200 to-red-300 bg-clip-text">
                     creadores de contenido
@@ -50,11 +43,11 @@ export default function Home() {
             </header>
 
             <div className="flex flex-col items-center justify-center flex-1 mt-8 text-center">
-              <h3 className="text-5xl font-bold text-[#ffff06]">25 Julio 2023</h3>
+              <h3 className="text-2xl md:text-5xl font-bold text-[#ffff06]">25 Julio 2023</h3>
               <div className="flex justify-center mt-2">
                 <h4 className="flex items-center gap-x-2">
                   <a
-                    className="flex items-center text-2xl font-semibold text-purple-400 transition gap-x-2 hover:scale-110 hover:underline"
+                    className="flex items-center text-lg font-semibold text-purple-400 transition md:text-2xl gap-x-2 hover:scale-110 hover:underline"
                     href="https://twitch.tv/midudev"
                     target="_blank"
                   >
@@ -67,7 +60,7 @@ export default function Home() {
 
             <footer className="flex flex-col w-full max-w-xs px-12 pb-32 m-auto mt-12 md:px-4 justify-evenly gap-y-4">
               <a
-                className="flex items-center justify-center px-4 py-2 text-sm text-white transition font-sm gap-x-1 hover:scale-110 hover:underline"
+                className="flex items-center justify-center px-4 py-2 text-xs text-white transition md:text-sm font-sm gap-x-1 hover:scale-110 hover:underline"
                 href="mailto:miduga@gmail.com"
                 target="_blank"
                 rel="noopener"
@@ -79,8 +72,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-16">
-          <article className="relative p-8 overflow-hidden rounded-lg aspect-square">
+        <div class="grid md:grid-cols-2 gap-16 px-8">
+          <article className="relative p-8 overflow-hidden text-center rounded-lg aspect-square [text-wrap:balance]">
             <h2 className={`${interTight.className} text-white text-6xl mb-10`}>
               Pruebas y
               <br />
@@ -92,8 +85,8 @@ export default function Home() {
               y mucho más.
             </p>
 
-            <div className="relative">
-              <div className="absolute bottom-0 left-0 z-10 w-full h-full bg-gradient-to-b from-transparent via-black/30 to-black"></div>
+            <div className="absolute bottom-0 left-0 right-0 w-full px-12 m-auto -mb-10">
+              <div className="absolute bottom-0 left-0 z-10 w-full h-full bg-gradient-to-b from-transparent from-0% via-black to-black"></div>
               <img className="shadow-lg " alt="Captura de pantalla de CSS Battle" src="/img/css-battle.jpg" />
             </div>
 
@@ -126,7 +119,7 @@ export default function Home() {
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
                     <feGaussianBlur stdDeviation="79.9667" result="effect1_foregroundBlur_17_62"></feGaussianBlur>
                   </filter>
@@ -134,15 +127,23 @@ export default function Home() {
               </svg>
             </div>
           </article>
-          <article className="relative p-8 overflow-hidden rounded-lg aspect-square">
+          <article className="relative p-8 overflow-hidden rounded-lg aspect-square text-center [text-wrap:balance]">
             <h2 className={`${interTight.className} text-white text-6xl mb-10`}>
               4 equipos,
               <br />4 capitanes
             </h2>
-            <p className="text-xl text-yellow-100 opacity-85">
+
+            <p className="mb-8 text-xl text-yellow-100 opacity-85">
               4 creadores de contenido serán los capitanes de los equipos y competirán por ser los mejores.
             </p>
+
+            <div className="absolute bottom-0 left-0 right-0 w-full px-12 m-auto -mb-10">
+              <div className="absolute bottom-0 left-0 z-10 w-full h-full bg-gradient-to-b from-transparent from-10% via-black to-black"></div>
+              <img className="shadow-lg " alt="Captura de pantalla de CSS Battle" src="/img/capitanes.png" />
+            </div>
+
             <div className="absolute bottom-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-transparent via-black/30 to-black"></div>
+
             <svg
               className="absolute inset-0 w-full opacity-60 backdrop-blur-lg -z-20"
               width="100%"
@@ -169,7 +170,7 @@ export default function Home() {
                   filterUnits="userSpaceOnUse"
                   color-interpolation-filters="sRGB"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
                   <feGaussianBlur stdDeviation="80.1666" result="effect1_foregroundBlur_17_17"></feGaussianBlur>
                 </filter>
