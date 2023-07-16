@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "2.22.0",
+    "atropos": "^2.0.2",
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",

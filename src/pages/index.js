@@ -10,6 +10,7 @@ const inter = Inter({ weight: ['400', '700'], subsets: ['latin'] })
 const interTight = Inter_Tight({ weight: ['800'], subsets: ['latin'] })
 
 import Head from 'next/head'
+import Ticket from '@/components/Ticket'
 
 export default function Home() {
   return (
@@ -40,6 +41,8 @@ export default function Home() {
       <main className={`${inter.className} max-w-7xl m-auto pb-20`}>
         <div>
           <div className="block w-full h-full">
+            <Ticket />
+
             <header className="flex flex-col items-center justify-center m-auto mb-20">
               <div className="relative">
                 <Logo />
@@ -77,18 +80,6 @@ export default function Home() {
                 </h4>
               </div>
             </div>
-
-            <footer className="flex flex-col w-full max-w-xs px-12 pb-32 m-auto mt-12 md:px-4 justify-evenly gap-y-4">
-              <a
-                className="flex items-center justify-center px-4 py-2 text-xs text-white transition md:text-sm font-sm gap-x-1 hover:scale-110 hover:underline"
-                href="mailto:miduga@gmail.com"
-                target="_blank"
-                rel="noopener"
-              >
-                <IconRocket className="w-6 h-6" />
-                Patrocinar como empresa
-              </a>
-            </footer>
           </div>
         </div>
 
