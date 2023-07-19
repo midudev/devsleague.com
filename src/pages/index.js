@@ -5,6 +5,7 @@ import { IconRocket } from '@tabler/icons-react'
 import { TwitchIcon } from '@/components/TwitchIcon'
 import MouseEffect from '@/components/Mouse'
 import { PruebasMarquee } from '@/components/Pruebas'
+import { MagicCard, MagicContainer } from '@/components/magicui/MagicCard'
 
 const inter = Inter({ weight: ['400', '700'], subsets: ['latin'] })
 const interTight = Inter_Tight({ weight: ['800'], subsets: ['latin'] })
@@ -67,14 +68,21 @@ export default function Home() {
               <aside className="flex flex-col items-center justify-center h-full">
                 <h2 className="text-white">¡Selecciona tu dev!</h2>
                 <div class="grid grid-cols-2 justify-between flex-wrap pb-0 gap-4">
-                  {DEVS.map((dev) => (
-                    <button class="col-span-1">
-                      <img
-                        class="object-cover aspect-square object-top w-40 bg-white"
-                        src={`/img/capitanes/${dev.img}`}
-                        alt={dev.name}
-                      />
-                    </button>
+                  {DEVS.map((dev, index) => (
+                    <MagicContainer
+                      key={index}
+                      className={'flex flex-col gap-4 h-[500px] lg:h-[250px] w-full lg:flex-row'}
+                    >
+                      <MagicCard className="flex flex-col items-center justify-center p-6 overflow-hidden shadow-2xl cursor-pointer bg-background">
+                        <button class="col-span-1">
+                          <img
+                            class="object-cover aspect-square object-top w-40 bg-white"
+                            src={`/img/capitanes/${dev.img}`}
+                            alt={dev.name}
+                          />
+                        </button>
+                      </MagicCard>
+                    </MagicContainer>
                   ))}
                 </div>
                 <button
@@ -89,9 +97,9 @@ export default function Home() {
                     viewBox="0 0 20 17"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
                   Compartir en Twitter
@@ -177,7 +185,7 @@ export default function Home() {
                     width="719.867"
                     height="719.867"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
