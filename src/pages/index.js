@@ -59,8 +59,6 @@ export default function Home({ ticketImg, support }) {
   })
 
   const handleClick = async () => {
-    setLoading(STEPS_LOADING.generate)
-
     if (!team) {
       const intent = 'https://twitter.com/intent/tweet'
       const text = `¡Arranca la DevsLeague!
@@ -81,6 +79,8 @@ https://devsleague.com/
 
       return
     }
+
+    setLoading(STEPS_LOADING.generate)
 
     fetch('/api/number', {
       method: 'POST',
