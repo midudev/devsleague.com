@@ -152,14 +152,14 @@ https://devsleague.com/?team=${devInfo.id}&ticket=${ticketId}
         <div>
           <div className="block w-full h-full mt-24">
             <section className="flex flex-col items-center justify-center w-full gap-x-10">
-              <div className="flex items-center justify-center flex-0 w-[900px]">
+              <div className="flex items-center justify-center flex-0 w-[900px] scale-[0.4] sm:scale-[0.7] md:scale-[.9] xl:scale[1]">
                 <Ticket number={number} />
               </div>
               <aside className="flex flex-col w-full h-full max-w-3xl mt-4">
                 <div className="m-auto text-center">
                   <img className="w-64" src="/img/elige.png" alt="Elige tu equipo" />
                 </div>
-                <div className="flex flex-row justify-between w-full gap-4 pb-0">
+                <div className="grid items-center justify-center w-full grid-cols-1 gap-4 pb-0 md:justify-between">
                   <SelectFighter />
                 </div>
                 <button
