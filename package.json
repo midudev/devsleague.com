@@ -9,11 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "3.373.0",
-    "@aws-sdk/s3-request-presigner": "3.373.0",
     "@supabase/supabase-js": "2.26.0",
     "@tabler/icons-react": "2.22.0",
-    "@uploadthing/react": "5.2.0",
     "@vercel/kv": "0.2.2",
     "atropos": "2.0.2",
     "autoprefixer": "10.4.14",
