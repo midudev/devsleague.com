@@ -97,6 +97,8 @@ https://devsleague.com/
           setLoading(STEPS_LOADING.uploading)
           const canvasRecord = await html2canvas(document.querySelector('#ticket'), {
             backgroundColor: '#000000',
+            windowWidth: 1200,
+            windowHeight: 1200,
           })
 
           const dataURL = canvasRecord.toDataURL('image/jpeg', 0.8)
