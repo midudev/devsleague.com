@@ -92,7 +92,7 @@ export default function Home({ ticketImg, support }) {
 
           setLoading(STEPS_LOADING.share)
 
-          const { data, error } = await supabase.storage.from('tickets').upload(filename, file, {
+          let { data, error } = await supabase.storage.from('tickets').upload(filename, file, {
             cacheControl: '3600',
             upsert: false,
           })
@@ -100,6 +100,18 @@ export default function Home({ ticketImg, support }) {
           if (error) {
             setLoading(STEPS_LOADING.off)
             console.error(error)
+
+            if (error.statusCode === 409) {
+              const force = confirm('¡Ya apoyaste a un equipo! ¿Quieres sobreescribir tu ticket?')
+
+              if (force) {
+                const { data: reData, error } = await supabase.storage.from('tickets').upload(filename, file, {
+                  cacheControl: '3600',
+                  upsert: force,
+                })
+                data = reData
+              }
+            }
           }
 
           if (data) {
@@ -363,8 +375,6 @@ https://devsleague.com/?team=${devInfo.id}&ticket=${ticketId}
 
 export async function getServerSideProps({ query }) {
   const { team, ticket } = query
-
-  console.log({ team, ticket })
 
   if (team && ticket) {
     const dev = DEVS.find((dev) => dev.id === team)
