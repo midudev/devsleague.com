@@ -90,6 +90,8 @@ export default function Home({ ticketImg, support }) {
 
           const filename = `ticket-${ticketId}.jpg`
 
+          setLoading(STEPS_LOADING.share)
+
           const { data, error } = await supabase.storage.from('tickets').upload(filename, file, {
             cacheControl: '3600',
             upsert: false,
@@ -101,7 +103,7 @@ export default function Home({ ticketImg, support }) {
           }
 
           if (data) {
-            setLoading(STEPS_LOADING.share)
+            setLoading(STEPS_LOADING.off)
 
             const intent = 'https://twitter.com/intent/tweet'
             const text = `¡Apoyo a ${devInfo.name} en la DevsLeague!

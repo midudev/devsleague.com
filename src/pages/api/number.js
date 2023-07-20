@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
     const number = await kv.incr('number')
 
-    res.setHeader('Set-Cookie', `_az=${crypto.randomUUID()}; Path=/; HttpOnly; Secure; SameSite=Strict`)
+    res.setHeader('Set-Cookie', `_az=${crypto.randomUUID()}; Path=/; Secure; SameSite=Strict`)
 
     return res.status(200).json({ number })
   }
