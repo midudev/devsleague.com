@@ -83,6 +83,7 @@ export default function Ticket({ number }) {
               <div className="absolute z-50 items-center p-4 overflow-hidden font-mono text-white md:p-6 right-2 bottom-2">
                 <span className="block mb-2 text-xs text-right text-zinc-300">Gracias a:</span>
                 <CohereLogo className="w-52" />
+                <div className="absolute inset-0 -z-10 blur-sm bg-gradient-radial from-black via-80% via-transparent to-transparent" />
               </div>
 
               <div className="absolute z-50 items-center p-4 overflow-hidden font-mono text-white md:p-6 left-2 bottom-2">
