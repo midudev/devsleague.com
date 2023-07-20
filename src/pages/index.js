@@ -61,6 +61,27 @@ export default function Home({ ticketImg, support }) {
   const handleClick = async () => {
     setLoading(STEPS_LOADING.generate)
 
+    if (!team) {
+      const intent = 'https://twitter.com/intent/tweet'
+      const text = `¡Arranca la DevsLeague!
+Competición de creadores de contenido de programación:
+
+⚔️ 4 equipos, 4 capitanes
+⌨️ Pruebas de código 
+📈 Liga con puntos
+🎁 ¡Un montón de premios!
+😱 Y muchas sorpresas
+
+No te lo pierdas:
+https://devsleague.com/
+
+#devsleague`
+
+      window.open(`${intent}?text=${encodeURIComponent(text)}`)
+
+      return
+    }
+
     fetch('/api/number', {
       method: 'POST',
       headers: {
