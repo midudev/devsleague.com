@@ -60,7 +60,7 @@ export const SelectFighter = () => {
           key={index}
           className={`border-2 ${
             team === dev.id ? `pointer-events-none` : 'cursor-pointer'
-          } w-1/2 aspect-[680/720] flex flex-col gap-4 group`}
+          } w-full h-auto aspect-[3/1] md:aspect-[2/1] lg:aspect-[85/90] flex flex-col gap-4 group`}
           style={{ borderColor: team === dev.id ? dev.color : 'white' }}
         >
           <MagicCard

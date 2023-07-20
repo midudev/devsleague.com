@@ -159,7 +159,7 @@ https://devsleague.com/?team=${devInfo.id}&ticket=${ticketId}
                 <div className="m-auto text-center">
                   <img className="w-64" src="/img/elige.png" alt="Elige tu equipo" />
                 </div>
-                <div className="grid items-center justify-center w-full grid-cols-1 gap-4 pb-0 md:justify-between">
+                <div className="grid items-center justify-center w-full grid-cols-1 gap-4 p-8 pb-0 md:grid-cols-2 lg:grid-cols-4 md:justify-between">
                   <SelectFighter />
                 </div>
                 <button
