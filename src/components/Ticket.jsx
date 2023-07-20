@@ -23,7 +23,7 @@ const BackgroundPattern = () => (
   </svg>
 )
 
-export default function Ticket() {
+export default function Ticket({ number }) {
   const team = useStore((state) => state.team)
   const { hash, name, id, color, img } = DEVS.find((dev) => dev.id === team) ?? {}
   const borderColor = team != null ? color : undefined
@@ -76,7 +76,9 @@ export default function Ticket() {
               </div>
               <div className="absolute items-center p-4 overflow-hidden font-mono text-white md:p-6 left-2 top-2">
                 <span className="block text-zinc-200">Nº Ticket</span>
-                <strong className="text-3xl font-extrabold">#0001</strong>
+                <strong className="text-3xl font-extrabold">
+                  #{number != null ? number.toString().padStart(4, '0') : ''}
+                </strong>
               </div>
               <div className="absolute z-50 items-center p-4 overflow-hidden font-mono text-white md:p-6 right-2 bottom-2">
                 <span className="block mb-2 text-xs text-right text-zinc-300">Gracias a:</span>

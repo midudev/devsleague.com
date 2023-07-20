@@ -1,5 +1,6 @@
 import { useStore } from '@/store'
 import { MagicCard, MagicContainer } from './magicui/MagicCard'
+import { useEffect } from 'react'
 
 export const DEVS = [
   {
@@ -40,9 +41,17 @@ export const SelectFighter = () => {
   const { team, selectTeam } = useStore((state) => state)
 
   const handleClick = (team) => () => {
-    console.log('team', team)
     selectTeam(team)
   }
+
+  useEffect(() => {
+    // read query params from url
+    const urlParams = new URLSearchParams(window.location.search)
+    const team = urlParams.get('team')
+    if (Boolean(team)) {
+      selectTeam(team)
+    }
+  }, [])
 
   return (
     <>
