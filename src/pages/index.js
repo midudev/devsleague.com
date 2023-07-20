@@ -125,9 +125,11 @@ https://devsleague.com/
             console.error(error)
 
             if (error.statusCode === '409') {
+              const filename = `ticket-${crypto.randomUUID()}.jpg`
+
               const { data: reData, error } = await supabase.storage.from('tickets').upload(filename, file, {
                 cacheControl: '3600',
-                upsert: true,
+                upsert: false,
               })
 
               data = reData
