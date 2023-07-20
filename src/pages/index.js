@@ -33,11 +33,11 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
       </Head>
-      <div className={`${inter.className} fixed flex items-center justify-center w-screen uppercase opacity-50 top-2`}>
+      <div className={`${inter.className} fixed flex items-center justify-center w-full uppercase opacity-50 top-2`}>
         <PruebasMarquee />
       </div>
 
-      <main className={`${inter.className} max-w-7xl m-auto pb-20`}>
+      <main className={`${inter.className} min-w-[54rem] m-auto pb-20`}>
         <div>
           <div className="block w-full h-full">
             <header className="flex flex-col items-center justify-center m-auto mb-20">
