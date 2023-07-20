@@ -124,7 +124,7 @@ https://devsleague.com/
             setLoading(STEPS_LOADING.off)
             console.error(error)
 
-            if (error.statusCode === 409) {
+            if (error.statusCode === '409') {
               const force = confirm('¡Ya apoyaste a un equipo! ¿Quieres sobreescribir tu ticket?')
 
               if (force) {
