@@ -125,15 +125,14 @@ https://devsleague.com/
             console.error(error)
 
             if (error.statusCode === '409') {
-              const force = confirm('¡Ya apoyaste a un equipo! ¿Quieres sobreescribir tu ticket?')
+              const { data: reData, error } = await supabase.storage.from('tickets').upload(filename, file, {
+                cacheControl: '3600',
+                upsert: true,
+              })
 
-              if (force) {
-                const { data: reData, error } = await supabase.storage.from('tickets').upload(filename, file, {
-                  cacheControl: '3600',
-                  upsert: force,
-                })
-                data = reData
-              }
+              data = reData
+
+              console.error(error)
             }
           }
 
