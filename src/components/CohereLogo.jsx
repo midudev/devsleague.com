@@ -6,9 +6,9 @@ export function CohereLogo({ className = 'w-full' }) {
       viewBox="0 0 1320 225"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class={`${className} h-auto`}
+      className={`${className} h-auto`}
     >
-      <g clip-path="url(#clip0_2833_44487)">
+      <g clipPath="url(#clip0_2833_44487)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

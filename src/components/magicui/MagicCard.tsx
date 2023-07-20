@@ -39,7 +39,7 @@ interface MagicContainerProps {
   className?: any
 }
 
-const MagicContainer = ({ children, className }: MagicContainerProps) => {
+const MagicContainer = ({ children, className, style }: MagicContainerProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const mousePosition = useMousePosition()
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
@@ -97,7 +97,7 @@ const MagicContainer = ({ children, className }: MagicContainerProps) => {
   }
 
   return (
-    <div className={className} ref={containerRef}>
+    <div className={className} ref={containerRef} style={style}>
       {children}
     </div>
   )
