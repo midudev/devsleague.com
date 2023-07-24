@@ -279,7 +279,7 @@ https://devsleague.com/?team=${devInfo.id}&ticket=${ticketId}
                 </h4>
               </div>
 
-              <h3 className="mt-10 text-2xl md:text-5xl font-bold text-[#ffff06]">2ª jornada - 8 Agosto 2023</h3>
+              <h3 className="mt-10 text-2xl md:text-5xl font-bold text-[#ffff06]">3ª jornada - 8 Agosto 2023</h3>
               <div className="flex justify-center mt-2">
                 <h4 className="flex items-center gap-x-2">
                   <a
