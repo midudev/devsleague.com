@@ -182,6 +182,7 @@ https://devsleague.com/?team=${devInfo.id}&ticket=${ticketId}
         <meta property="twitter:url" content={url} />
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <RadialGradient />
