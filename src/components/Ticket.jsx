@@ -65,7 +65,7 @@ export default function Ticket({ number }) {
                     dateTime="2023-06-20T18:00-04:00"
                     className="z-50 flex items-center text-shadow-xl text-1rem/6 text-zinc-200"
                   >
-                    25 de julio, 2023
+                    1 de agosto, 2023
                     <svg viewBox="0 0 2 2" className="mx-3 h-[0.1875rem] w-[0.1875rem] flex-none fill-yellow-300 z-50">
                       <circle cx={1} cy={1} r={1} />
                     </svg>
