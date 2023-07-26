@@ -10,7 +10,7 @@ export const DEVS = [
     background: 'rgba(98,255,0,0.08)',
     color: 'rgba(98,255,0,1)',
     hash: '#teamHector',
-    points: 15,
+    points: 23,
   },
   {
     id: 'goncy',
@@ -19,7 +19,7 @@ export const DEVS = [
     background: 'rgb(0,255,247,0.08)',
     color: 'rgb(0,255,247,1)',
     hash: '#teamGoncy',
-    points: 15,
+    points: 34,
   },
   {
     id: 'noe',
@@ -28,7 +28,7 @@ export const DEVS = [
     background: 'rgba(179,0,255,0.08)',
     color: 'rgb(179,0,255,1)',
     hash: '#teamNoe',
-    points: 15,
+    points: 13,
   },
   {
     id: 'carmen',
@@ -37,7 +37,7 @@ export const DEVS = [
     background: 'rgb(255,0,0,0.08)',
     color: 'rgb(255,0,0,1)',
     hash: '#teamCarmen',
-    points: 15,
+    points: 23,
   },
 ]
 
