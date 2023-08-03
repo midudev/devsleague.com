@@ -1,7 +1,6 @@
 import { Meteors } from './Meteor'
 import { useRemainingTime } from '../hooks/useRemainingTime'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export function HeaderCountdown() {
   const { seconds, minutes, hours, days } = useRemainingTime(new Date(1691517600000), {
