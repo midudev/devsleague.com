@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 
 export function HeaderCountdown() {
-  const { seconds, minutes, hours, days } = useRemainingTime(new Date(1690905600000), {
+  const { seconds, minutes, hours, days } = useRemainingTime(new Date(1691517600000), {
     fillingZeros: false,
   })
   const [show, setShow] = useState(false)
@@ -26,7 +26,7 @@ export function HeaderCountdown() {
           <div className="w-full flex gap-3 md:gap-6 items-center md:justify-center text-sm md:text-base !justify-center">
             <p>
               <span className="hidden font-semibold text-yellow-300 md:inline">Próxima</span>{' '}
-              <span className="font-semibold text-yellow-300">Jornada 2</span>
+              <span className="font-semibold text-yellow-300">GRAN FINAL</span>
             </p>
             <div className="flex items-center gap-1">
               <div className="flex items-center gap-1">
